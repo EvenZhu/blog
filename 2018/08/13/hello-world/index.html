@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '6.4.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -274,22 +274,6 @@
         
         
           
-          <li class="menu-item menu-item-schedule">
-    <a href="/schedule/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-    <a href="/sitemap.xml" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />站点地图</a>
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-commonweal">
     <a href="/404/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益 404</a>
@@ -398,6 +382,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/13/hello-world/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/13/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -523,6 +519,16 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -699,7 +705,7 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.0</div>
 
 
 
@@ -814,9 +820,30 @@
 
   
 
-
+  
+    <script id="dsq-count-scr" src="https://过客.disqus.com/count.js" async></script>
+  
 
   
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/08/13/hello-world/';
+        this.page.identifier = '2018/08/13/hello-world/';
+        this.page.title = 'Hello World';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://过客.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
 
 
 
