@@ -372,7 +372,7 @@
                 
               
 
-              <time title="创建时间：2018-08-13 14:44:33 / 修改时间：14:53:24" itemprop="dateCreated datePublished" datetime="2018-08-13T14:44:33+08:00">2018-08-13</time>
+              <time title="创建时间：2018-08-13 14:44:33 / 修改时间：14:57:16" itemprop="dateCreated datePublished" datetime="2018-08-13T14:44:33+08:00">2018-08-13</time>
             
 
             
@@ -453,10 +453,10 @@
 <blockquote>
 <p>获取淘宝App（以下简称App），点击淘气值之后显示的淘宝评级数据</p>
 </blockquote>
-<h5 id="梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）"><a href="#梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）" class="headerlink" title="梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）"></a>梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）</h5><h6 id="1-点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是"><a href="#1-点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是" class="headerlink" title="1. 点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是"></a>1. 点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是</h6><pre><code>https://h5.m.taobao.com/app/mconsumer/www/index/index.html 
+<h4 id="梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）"><a href="#梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）" class="headerlink" title="梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）"></a>梳理一下需求和操作过程：（老板就是老板，需求永远说的那么简洁，但是实际上总是很复杂）</h4><h6 id="1-点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是"><a href="#1-点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是" class="headerlink" title="1. 点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是"></a>1. 点击App我的淘宝页面，使用抓包工具Fiddler抓取在这个页面执行的Https请求；其中有一个请求是</h6><pre><code>https://h5.m.taobao.com/app/mconsumer/www/index/index.html 
 </code></pre><p>没错，就是这货（至于Fiddler的使用，不是本文讨论内容）</p>
-<h6 id="2-接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；"><a href="#2-接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；" class="headerlink" title="2. 接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；"></a>2. 接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；</h6><p>但是一上手我傻眼了，这个网页源码竟然没有想要的数据，我擦嘞，原来是ajax请求，已经好久没有搞过前端代码的我瞬间懵圈了，搞个App开发还是离不开前端知识啊！</p>
-<h6 id="3-费劲九年二虎之力，终于发现了这个ajax请求的API："><a href="#3-费劲九年二虎之力，终于发现了这个ajax请求的API：" class="headerlink" title="3. 费劲九年二虎之力，终于发现了这个ajax请求的API："></a>3. 费劲九年二虎之力，终于发现了这个ajax请求的API：</h6><pre><code>https://api.m.taobao.com/h5/mtop.vip.gold.user.info/1.0/?appKey=12574478&amp;t=1470640510077&amp;sign=44b0bcaf92f23777bf00d0097fb6b780&amp;api=mtop.vip.gold.user.info&amp;v=1.0&amp;type=jsonp&amp;dataType=jsonp&amp;callback=mtopjsonp1&amp;data=%7B%7D
+<h5 id="2-接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；"><a href="#2-接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；" class="headerlink" title="2. 接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；"></a>2. 接下来在开始测试这个链接，其实就是在浏览器里加载这个URL，从而获取网页上数据的结构（类名、ID等等）；</h5><p>但是一上手我傻眼了，这个网页源码竟然没有想要的数据，我擦嘞，原来是ajax请求，已经好久没有搞过前端代码的我瞬间懵圈了，搞个App开发还是离不开前端知识啊！</p>
+<h5 id="3-费劲九年二虎之力，终于发现了这个ajax请求的API："><a href="#3-费劲九年二虎之力，终于发现了这个ajax请求的API：" class="headerlink" title="3. 费劲九年二虎之力，终于发现了这个ajax请求的API："></a>3. 费劲九年二虎之力，终于发现了这个ajax请求的API：</h5><pre><code>https://api.m.taobao.com/h5/mtop.vip.gold.user.info/1.0/?appKey=12574478&amp;t=1470640510077&amp;sign=44b0bcaf92f23777bf00d0097fb6b780&amp;api=mtop.vip.gold.user.info&amp;v=1.0&amp;type=jsonp&amp;dataType=jsonp&amp;callback=mtopjsonp1&amp;data=%7B%7D
 </code></pre><p>这个也就是淘宝自家开发人员写的获取淘宝评级信息的请求API，刚看到这的时候我兴奋了一下，这样的话我就可以直接在加载完这个页面之后get一下这个Api不就可以了？？接着在浏览器里面试了一下还真行！然后我就开始打开Xcode开始测试可行性。<br>就在这时我忽然想的一个很严肃的问题，这个Api是登录淘宝账号之后才会返回信息的，也就是说它必然，依赖于淘宝账号的cookie和缓存数据，那如果我脱离这些之后还可以再获取到数据吗？<br>想到就做，于是我在HTTP请求工具上面测试了一下，果然不可以，返回的数据是</p>
 <pre><code>mtopjsonp1({&quot;api&quot;:&quot;mtop.vip.gold.user.info&quot;,&quot;v&quot;:&quot;1.0&quot;,&quot;ret&quot;:[&quot;FAIL_SYS_ILLEGAL_ACCESS::非法请求&quot;],&quot;data&quot;:{}})
 </code></pre><p>也就是说我的请求是非法的，为毛是非法的呢？后来经过一番研究，发现，其中有两个参数是变化的</p>
@@ -476,7 +476,7 @@
 </code></pre><p>其中<em>MyUrlCache</em>是我继承自<em>NSURLCache</em>的自定义类，然后我需要在<em>MyUrlCache</em>中重写<em>NSURLCache</em>的一个方法</p>
 <pre><code>- (NSCachedURLResponse *)cachedResponseForRequest:(NSURLRequest *)request
 </code></pre><p>在这个方法里面可以截获到App中所有的请求（包括资源、http、https等）的request，因为所有的请求都会经过这个判断是否有缓存的方法！！<br>但是问题来了，我使用这个方法获取到了那个ajax请求的完整URL（还是值得兴奋的），<em>然并卵</em>，因为我在这个时机试着get了一下这个URL返回数据依然是”非法的请求”！！</p>
-<h5 id="我擦嘞"><a href="#我擦嘞" class="headerlink" title="我擦嘞"></a>我擦嘞</h5><p>虾米意思？我忙活了这么久，就给个这结果吗？我不甘心呐！于是就继续忙活！终于发现，原来<em>NSURLCache</em>这货居然还有这么一个方法</p>
+<h4 id="我擦嘞"><a href="#我擦嘞" class="headerlink" title="我擦嘞"></a>我擦嘞</h4><p>虾米意思？我忙活了这么久，就给个这结果吗？我不甘心呐！于是就继续忙活！终于发现，原来<em>NSURLCache</em>这货居然还有这么一个方法</p>
 <pre><code>- (void)storeCachedResponse:(NSCachedURLResponse *)cachedResponse forRequest:(NSURLRequest *)request
 </code></pre><p>看到没有，这货竟然有一个参数是<em>cachedResponse</em>，没错，我就是要它，因为这个方法里面有所有请求的respone，也就是说所有的请求的返回数据在这个方法里都可以截获！<br>牛大发了，赶紧操刀子干起来</p>
 <pre><code>- (void)storeCachedResponse:(NSCachedURLResponse *)cachedResponse forRequest:(NSURLRequest *)request {
@@ -485,7 +485,7 @@
     }
 }
 </code></pre><p>根据我得到的ajax请求的URL（去除QueryString）路径进行过滤，如果是这个URL的话，我就把这个<em>cachedResponse</em>的data数据拿到，然后用NSString进行NSUtf8解码就得到了我想要的结果</p>
-<h6 id="3-解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；"><a href="#3-解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；" class="headerlink" title="3.解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；"></a>3.解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；</h6><hr>
+<h5 id="3-解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；"><a href="#3-解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；" class="headerlink" title="3.解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；"></a>3.解析得到的数据并做相应的处理（跟公司业务相关就不介绍了）；</h5><hr>
 <p>终于搞定了，一天的时间，因为期间走了很多的弯路，所以大部分时间是在原地转圈，其实解决问题就是这样，一个问题的研究深度和角度本身就是矛盾体，如果你往一个方向研究的深了，自然也就耽误了去多角度思考问题的时间。权衡利弊，因地制宜。</p>
 <blockquote>
 <p>后来我才发现原来使用<em>NSURLCache</em>的第一个方法获取的那个完整的URL还是可以直接请求的，不过第一次会返回“非法请求”，第二次就正常了，具体原因吗？改天再研究吧，今天搞了一天，头疼！</p>
